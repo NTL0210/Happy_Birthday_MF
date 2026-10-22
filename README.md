@@ -18,7 +18,7 @@ Target duration: 2–4 minutes.
 **Phase 0 — Repository audit and project setup: COMPLETE**
 
 Only Phase 0 has been executed. No website implementation exists yet.
-See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) for the authoritative phase table.
+See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) for the authoritative project status.
 
 ## Technical approach
 
@@ -50,11 +50,7 @@ See [`PROJECT_STATUS.md`](PROJECT_STATUS.md) for the authoritative phase table.
 │   ├── audio/            verified optional audio
 │   └── fonts/            self-hosted font files when practical
 ├── tools/                local preview helpers (no runtime dependency)
-├── PROJECT_STATUS.md
-├── PROJECT_LOG.md
-├── NEXT_SESSION.md
-├── ASSET_SOURCES.md
-└── RESEARCH_NOTES.md
+└── PROJECT_STATUS.md
 ```
 
 ## Local preview
@@ -76,11 +72,7 @@ Planned: GitHub → Repository → Settings → Pages → Deploy from a branch �
 
 ## Documentation
 
-- [`PROJECT_STATUS.md`](PROJECT_STATUS.md) — authoritative progress
-- [`PROJECT_LOG.md`](PROJECT_LOG.md) — chronological work log
-- [`NEXT_SESSION.md`](NEXT_SESSION.md) — handoff for the next session
-- [`ASSET_SOURCES.md`](ASSET_SOURCES.md) — asset provenance and licenses
-- [`RESEARCH_NOTES.md`](RESEARCH_NOTES.md) — references and design decisions
+- [`PROJECT_STATUS.md`](PROJECT_STATUS.md) — authoritative project status
 
 ## Disclaimer
 

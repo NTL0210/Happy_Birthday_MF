@@ -1,130 +1,66 @@
 # PROJECT_STATUS — Moonlight Protocol: Strawberry Dream
 
-> Authoritative progress file. If this file conflicts with the repository, inspect the
-> code and Git state, then reconcile this document.
+- **Current phase:** Phase 0 — Repository audit and project setup
+- **Phase status:** Completed
+- **Last updated:** 2026-10-22 22:34 (+07:00)
 
-## At a glance
+## Project objective
 
-| Field | Value |
-|---|---|
-| **Project name** | Moonlight Protocol — Strawberry Dream |
-| **Current phase** | Phase 0 — Repository audit and project setup |
-| **Current status** | **COMPLETE** |
-| **Last updated** | 2026-10-22 22:29 (+07:00) |
-| **Overall completion estimate** | **5%** — repository setup and planning only; no website code or assets exist yet |
-| **Next phase** | Phase 1 — Research and asset discovery |
-| **Remote repository** | <https://github.com/NTL0210/Happy_Birthday_MF> |
-| **Branch** | `main` |
-| **Deployment target** | GitHub Pages, `main` branch, `/(root)` — not configured yet |
+Build a five-screen interactive birthday website that pairs a Persona 3 Reload-inspired
+midnight interface with a cute Strawberry Dream bakery aesthetic: The Dark Hour →
+Birthday Mission → Strawberry Hunt → Cake of the Moonlight → The Secret Letter.
 
-## Phase table
+## Repository state
 
-| Phase | Name | Status | Verification |
-|---|---|---|---|
-| 0 | Repository audit and project setup | COMPLETE | Directory and remote audited; docs written; Git history inspected |
-| 1 | Research and asset discovery | NOT STARTED | Pending |
-| 2 | Asset verification and design specification | NOT STARTED | Pending |
-| 3 | Design foundation and first visual prototype | NOT STARTED | Pending |
-| 4 | Core screens and navigation | NOT STARTED | Pending |
-| 5 | Strawberry Hunt mini-game | NOT STARTED | Pending |
-| 6 | Cake customization and birthday sequence | NOT STARTED | Pending |
-| 7 | Secret letter, audio, and final polish | NOT STARTED | Pending |
-| 8 | Testing, accessibility, and performance | NOT STARTED | Pending |
-| 9 | GitHub Pages deployment preparation and verification | NOT STARTED | Pending |
-| 10 | Final audit and handoff | NOT STARTED | Pending |
+- Local path: `D:\project_B`
+- Remote: <https://github.com/NTL0210/Happy_Birthday_MF>, branch `main`, tracking
+  `origin/main`
+- Working-tree content: `.gitignore`, `README.md`, and this file
+- No application code, images, fonts, or audio exist yet
+- Phase 0 commits `453410b`, `eb7ab44`, and `4a694c3` were pushed and verified
+- The documentation cleanup is currently uncommitted; no commit or push was authorized
+- GitHub Pages is not configured
 
-## Phase 0 objectives
+## Decisions and constraints
 
-- Inspect the existing repository, remote, and tooling.
-- Preserve any existing work and user changes.
-- Choose and document a suitable static architecture.
-- Create the required persistent progress files.
-- Record the initial state and stop for review.
+- Static site: HTML5, CSS3, and vanilla ES modules; no framework, build step, backend,
+  database, authentication, or runtime dependency
+- Deploy from `main` at `/(root)` on GitHub Pages, using relative asset paths so the
+  site works under `/Happy_Birthday_MF/`
+- Five-screen experience with a mystery → curiosity → playfulness → warmth →
+  personal-connection arc; understandable without Persona knowledge
+- Visual direction: midnight navy and electric cyan with strawberry, cream, and soft
+  pink accents; original interface design only
+- No AI-generated images and no proprietary Atlus/SEGA artwork, logos, characters, or
+  music. External assets require verified licenses and documented provenance before use
+- Responsive, keyboard/touch accessible, with visible focus and reduced-motion support
+- Phase-gated workflow: one phase per explicit authorization; commit and push only when
+  a phase is complete and authorized
 
-## Tasks completed
+## Completed work
 
-- [x] Inspected `D:\project_B` — it was completely empty (0 entries).
-- [x] Confirmed it was not a Git repository.
-- [x] Inspected the remote GitHub repository via its public page — GitHub reports
-      **"This repository is empty."**
-- [x] Checked tooling: Git 2.52.0, Node.js v22.21.1, npm 10.9.4 available;
-      Python not available; GitHub CLI (`gh`) not installed.
-- [x] Confirmed Git identity (`NTL0210 <02102004ntl@gmail.com>`) and the Windows
-      Credential Manager helper are configured.
-- [x] Initialized a local repository on branch `main`.
-- [x] Added remote `origin` = `https://github.com/NTL0210/Happy_Birthday_MF.git`.
-- [x] Documented the planned static architecture in `README.md`.
-- [x] Created `.gitignore` for OS noise, local tooling, test artifacts, and secrets.
-- [x] Created all five required tracking/research documents.
-- [x] Recorded Phase 0 in `PROJECT_LOG.md`.
-- [x] Prepared `NEXT_SESSION.md` for a clean handoff.
+- [x] Audited an empty local directory and an empty remote repository; no prior work
+      needed preservation
+- [x] Verified tooling: Git 2.52.0, Node.js 22.21.1, npm 10.9.4; `gh` and Python are
+      unavailable
+- [x] Initialized `main`, added `origin`, and verified the Phase 0 push
+- [x] Created `.gitignore` and `README.md`
+- [x] Consolidated tracking into this file and removed `PROJECT_LOG.md`,
+      `NEXT_SESSION.md`, `RESEARCH_NOTES.md`, and `ASSET_SOURCES.md`
 
-## Tasks remaining
+## Known issues and pending decisions
 
-Phase 0 has no remaining tasks. Later phases are intentionally not started.
+- No local preview helper exists yet; Node-based tooling will be used
+- No assets, fonts, or audio have been researched, selected, or licensed
+- Pending user input: recipient name or greeting, background music, final copy, and
+  deployment authorization
+- The cleanup deletions are uncommitted pending authorization
 
-## Verification performed
+## Next authorized phase
 
-| Check | Result |
-|---|---|
-| Working directory contents | Empty before initialization (0 files) |
-| Git repository state | Not a repo before initialization; initialized on `main` with no commits |
-| Remote repository state | Public page confirms repository is empty |
-| Git remote configuration | `origin` fetch/push URLs set correctly |
-| Git identity | Global `user.name` and `user.email` present |
-| Required progress files | Created and read back after writing |
-| Existing user work | None present; nothing overwritten or deleted |
-| Destructive operations | None run; no reset, clean, or force push |
-| Phase 0 commits | `453410b` (setup), `eb7ab44` (push verification), plus this final documentation commit |
-| Push verification | Remote `main` exists and tracks local; raw GitHub read-back at `eb7ab44` matched the local status file |
+**Phase 1 — Research and asset discovery**
 
-## Known issues
+## Next action
 
-1. **No `gh` CLI available.** Remote operations must use `git` with HTTPS and the
-   Windows Credential Manager. The Phase 0 push succeeded without an interactive
-   prompt, so credentials are working.
-2. **No Python installed.** Local preview will use Node-based tooling; a helper will
-   be added before the first browser verification.
-3. **No website exists yet.** Do not interpret the repository as a working product.
-4. **Fonts/audio decisions pending.** No external asset has been selected, downloaded,
-   or licensed yet.
-
-## Decisions requiring user approval
-
-| Decision | Why it matters | Default if no answer |
-|---|---|---|
-| Recipient's display name in the letter | Personalization; must not be invented | Use a neutral greeting and an editable `content.js` field |
-| Whether to include background music | Licensing and taste | Prefer a legally usable, quiet instrumental; graceful fallback otherwise |
-| Deployment authorization | Phase 9 push/publish | Prepare instructions and wait for approval |
-| Preferred final public URL / custom domain | GitHub Pages configuration | `https://ntl0210.github.io/Happy_Birthday_MF/` |
-| Letter/birthday copy edits | Emotional tone | Use the prompt's suggested copy, kept in one editable file |
-
-## Repository state at end of Phase 0
-
-Branch `main`, clean, tracking `origin/main` (final Phase 0 documentation commit pushed).
-
-```
-D:\project_B\
-├── .git/
-├── .gitignore
-├── README.md
-├── PROJECT_STATUS.md
-├── PROJECT_LOG.md
-├── NEXT_SESSION.md
-├── ASSET_SOURCES.md
-└── RESEARCH_NOTES.md
-```
-
-No `index.html`, CSS, JavaScript, or downloaded assets exist yet.
-
-## Exact next recommended action
-
-1. Review the Phase 0 documents, architecture, and repository state.
-2. Authorize Phase 1.
-3. In Phase 1, research the Persona 3 Reload visual language, JRPG interface
-   references, license-safe nighttime/strawberry/bakery illustrations, fonts, and
-   optional audio. Open original source pages, record candidate licenses in
-   `ASSET_SOURCES.md`, and produce a grounded design direction without downloading
-   unverified assets in bulk.
-
-**Phase to execute next:** Phase 1 — Research and asset discovery.
+Wait for explicit user authorization before starting Phase 1. Do not research assets or
+implement application features until then.
