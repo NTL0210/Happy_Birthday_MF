@@ -2,7 +2,7 @@
 
 - **Current phase:** Phase 0 — Repository audit and project setup
 - **Phase status:** Completed
-- **Last updated:** 2026-10-22 22:34 (+07:00)
+- **Last updated:** 2026-10-22 22:36 (+07:00)
 
 ## Project objective
 
@@ -18,7 +18,7 @@ Birthday Mission → Strawberry Hunt → Cake of the Moonlight → The Secret Le
 - Working-tree content: `.gitignore`, `README.md`, and this file
 - No application code, images, fonts, or audio exist yet
 - Phase 0 commits `453410b`, `eb7ab44`, and `4a694c3` were pushed and verified
-- The documentation cleanup is currently uncommitted; no commit or push was authorized
+- Documentation cleanup commit `7ad48c2` is also pushed and verified
 - GitHub Pages is not configured
 
 ## Decisions and constraints
@@ -54,7 +54,6 @@ Birthday Mission → Strawberry Hunt → Cake of the Moonlight → The Secret Le
 - No assets, fonts, or audio have been researched, selected, or licensed
 - Pending user input: recipient name or greeting, background music, final copy, and
   deployment authorization
-- The cleanup deletions are uncommitted pending authorization
 
 ## Next authorized phase
 
