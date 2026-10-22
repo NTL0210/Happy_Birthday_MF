@@ -18,8 +18,10 @@ No website implementation exists yet. Phase 1 has **not** been authorized or sta
 
 - Local path: `D:\project_B`
 - Git repo on branch `main`, tracking `origin/main`.
-- Phase 0 commit: `453410b` ("Phase 0: initialize repository and project tracking"),
-  pushed and verified at `refs/heads/main`.
+- Phase 0 commit history includes `453410b` ("Phase 0: initialize repository and
+  project tracking") and `eb7ab44` ("docs: record Phase 0 push verification"), with a
+  final documentation commit on top. Use `git log` for the current head; everything is
+  pushed to `origin/main`.
 - Remote: `https://github.com/NTL0210/Happy_Birthday_MF.git`
 - Remote started empty; GitHub confirmed "This repository is empty" before initialization.
 - Tooling: Git 2.52.0, Node.js 22.21.1, npm 10.9.4. No `gh`, no Python.

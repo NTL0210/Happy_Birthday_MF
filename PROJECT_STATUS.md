@@ -10,7 +10,7 @@
 | **Project name** | Moonlight Protocol — Strawberry Dream |
 | **Current phase** | Phase 0 — Repository audit and project setup |
 | **Current status** | **COMPLETE** |
-| **Last updated** | 2026-10-22 22:28 (+07:00) |
+| **Last updated** | 2026-10-22 22:29 (+07:00) |
 | **Overall completion estimate** | **5%** — repository setup and planning only; no website code or assets exist yet |
 | **Next phase** | Phase 1 — Research and asset discovery |
 | **Remote repository** | <https://github.com/NTL0210/Happy_Birthday_MF> |
@@ -75,8 +75,8 @@ Phase 0 has no remaining tasks. Later phases are intentionally not started.
 | Required progress files | Created and read back after writing |
 | Existing user work | None present; nothing overwritten or deleted |
 | Destructive operations | None run; no reset, clean, or force push |
-| Phase 0 commit | `453410b83318f630d8e99e24e6ed2e68900ea30d` on `main` |
-| Push verification | `git ls-remote --heads origin` returns the same commit; GitHub commit page shows it |
+| Phase 0 commits | `453410b` (setup), `eb7ab44` (push verification), plus this final documentation commit |
+| Push verification | Remote `main` exists and tracks local; raw GitHub read-back at `eb7ab44` matched the local status file |
 
 ## Known issues
 
@@ -101,7 +101,7 @@ Phase 0 has no remaining tasks. Later phases are intentionally not started.
 
 ## Repository state at end of Phase 0
 
-Branch `main` at commit `453410b` (pushed to `origin`).
+Branch `main`, clean, tracking `origin/main` (final Phase 0 documentation commit pushed).
 
 ```
 D:\project_B\

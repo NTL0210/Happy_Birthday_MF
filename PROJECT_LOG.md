@@ -58,6 +58,8 @@ was not a Git repository.
 | `git push -u origin main` | Created remote `main`; PowerShell surfaced Git's stderr as a non-zero exit, but the branch was created |
 | `git ls-remote --heads origin` (post-push) | `453410b83318f630d8e99e24e6ed2e68900ea30d refs/heads/main` |
 | GitHub commits page | Shows commit `453410b` on `main` |
+| `git commit` + `git push` (docs) | Commit `eb7ab44`; remote `main` updated `453410b..eb7ab44` |
+| Raw GitHub file read-back | `PROJECT_STATUS.md` served from GitHub matches the local file |
 
 ### Important decisions
 
@@ -92,7 +94,7 @@ was not a Git repository.
 - No application tests exist yet.
 - All seven documentation files were written and listed on disk before commit.
 - Commit `453410b` exists locally and remotely; local `HEAD`, `origin/main`, and the
-  GitHub commit page agree.
+  GitHub commit page agree. Follow-up documentation commits are also pushed.
 - No build, browser, or accessibility test has been run (no website exists).
 
 ### Remaining risks
