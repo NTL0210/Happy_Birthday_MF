@@ -17,7 +17,9 @@ No website implementation exists yet. Phase 1 has **not** been authorized or sta
 ## Actual repository state (verified 2026-10-22)
 
 - Local path: `D:\project_B`
-- Git repo initialized on branch `main`; first commit/push prepared at end of Phase 0.
+- Git repo on branch `main`, tracking `origin/main`.
+- Phase 0 commit: `453410b` ("Phase 0: initialize repository and project tracking"),
+  pushed and verified at `refs/heads/main`.
 - Remote: `https://github.com/NTL0210/Happy_Birthday_MF.git`
 - Remote started empty; GitHub confirmed "This repository is empty" before initialization.
 - Tooling: Git 2.52.0, Node.js 22.21.1, npm 10.9.4. No `gh`, no Python.
@@ -61,11 +63,11 @@ No website implementation exists yet. Phase 1 has **not** been authorized or sta
 
 ## Known issues / blockers
 
-1. No `gh` CLI. Use `git` + HTTPS + Windows Credential Manager.
-2. First GitHub authentication is unverified.
-3. No Python; local preview must use Node (a server helper is planned).
-4. No assets researched, verified, downloaded, or licensed.
-5. Recipient name, music choice, letter copy, and deployment authorization need user
+1. No `gh` CLI. Use `git` + HTTPS + Windows Credential Manager; the Phase 0 push
+   authenticated successfully.
+2. No Python; local preview must use Node (a server helper is planned).
+3. No assets researched, verified, downloaded, or licensed.
+4. Recipient name, music choice, letter copy, and deployment authorization need user
    input (see `PROJECT_STATUS.md` → Decisions requiring user approval).
 
 ## Commands
@@ -117,5 +119,5 @@ git push -u origin main
 
 - Nothing in Phase 0 is unfinished.
 - Phases 1–10 are not started.
-- No push has occurred at the time this file was written; confirm the actual commit
-  and push state with Git before trusting this note.
+- Phase 0 is pushed. Confirm the actual commit and push state with Git before trusting
+  this note.

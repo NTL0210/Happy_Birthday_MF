@@ -10,7 +10,7 @@
 | **Project name** | Moonlight Protocol — Strawberry Dream |
 | **Current phase** | Phase 0 — Repository audit and project setup |
 | **Current status** | **COMPLETE** |
-| **Last updated** | 2026-10-22 22:30 (+07:00) |
+| **Last updated** | 2026-10-22 22:28 (+07:00) |
 | **Overall completion estimate** | **5%** — repository setup and planning only; no website code or assets exist yet |
 | **Next phase** | Phase 1 — Research and asset discovery |
 | **Remote repository** | <https://github.com/NTL0210/Happy_Birthday_MF> |
@@ -75,18 +75,18 @@ Phase 0 has no remaining tasks. Later phases are intentionally not started.
 | Required progress files | Created and read back after writing |
 | Existing user work | None present; nothing overwritten or deleted |
 | Destructive operations | None run; no reset, clean, or force push |
+| Phase 0 commit | `453410b83318f630d8e99e24e6ed2e68900ea30d` on `main` |
+| Push verification | `git ls-remote --heads origin` returns the same commit; GitHub commit page shows it |
 
 ## Known issues
 
 1. **No `gh` CLI available.** Remote operations must use `git` with HTTPS and the
-   Windows Credential Manager. If credentials are missing, the first push may open
-   an authentication prompt.
+   Windows Credential Manager. The Phase 0 push succeeded without an interactive
+   prompt, so credentials are working.
 2. **No Python installed.** Local preview will use Node-based tooling; a helper will
    be added before the first browser verification.
 3. **No website exists yet.** Do not interpret the repository as a working product.
-4. **Remote repository is empty.** `git ls-remote --heads origin` returned no heads,
-   matching the GitHub page. The first push will create `main`.
-5. **Fonts/audio decisions pending.** No external asset has been selected, downloaded,
+4. **Fonts/audio decisions pending.** No external asset has been selected, downloaded,
    or licensed yet.
 
 ## Decisions requiring user approval
@@ -100,6 +100,8 @@ Phase 0 has no remaining tasks. Later phases are intentionally not started.
 | Letter/birthday copy edits | Emotional tone | Use the prompt's suggested copy, kept in one editable file |
 
 ## Repository state at end of Phase 0
+
+Branch `main` at commit `453410b` (pushed to `origin`).
 
 ```
 D:\project_B\

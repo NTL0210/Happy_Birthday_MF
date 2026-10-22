@@ -7,7 +7,7 @@ and are not rewritten to look successful. All times are local (+07:00 unless not
 
 ## Phase 0 — Repository audit and project setup
 
-**Date/time:** 2026-10-22 22:26–22:35 (+07:00)
+**Date/time:** 2026-10-22 22:26–22:28 (+07:00)
 **Status:** COMPLETE
 
 ### Context
@@ -52,8 +52,12 @@ was not a Git repository.
 | `git remote add origin https://github.com/NTL0210/Happy_Birthday_MF.git` | Added |
 | `git remote -v` | `origin` fetch/push URLs correct |
 | `git ls-remote --heads origin` (first attempt) | Failed: `'origin' does not appear to be a git repository` |
-| `git ls-remote --heads origin` (re-run) | Succeeded with no output; remote has no branch heads (empty repo) |
+| `git ls-remote --heads origin` (re-run) | Succeeded with no output; remote had no branch heads (empty repo) |
 | `git status --short --branch` | `## No commits yet on main` |
+| `git add -A` + `git commit` | Commit `453410b` — 7 files, 651 insertions |
+| `git push -u origin main` | Created remote `main`; PowerShell surfaced Git's stderr as a non-zero exit, but the branch was created |
+| `git ls-remote --heads origin` (post-push) | `453410b83318f630d8e99e24e6ed2e68900ea30d refs/heads/main` |
+| GitHub commits page | Shows commit `453410b` on `main` |
 
 ### Important decisions
 
@@ -78,17 +82,21 @@ was not a Git repository.
    and ran before the remote existed. Re-running after the remote was configured
    succeeded. No repository damage.
 2. **GitHub CLI unavailable.** Chose `git` over HTTPS with Windows Credential Manager.
-   Push authentication is unverified until the first Phase 0 push.
+   The first push authenticated successfully.
+3. **PowerShell false-negative on push.** `git push` wrote progress to stderr, which
+   PowerShell surfaced as a `NativeCommandError` with exit code 1. The push itself
+   succeeded, confirmed independently by `git ls-remote` and the GitHub commits page.
 
 ### Actual test results
 
 - No application tests exist yet.
-- Documentation write-back will be verified after all files are created.
-- Push result will be recorded in an appended line after `git push`.
+- All seven documentation files were written and listed on disk before commit.
+- Commit `453410b` exists locally and remotely; local `HEAD`, `origin/main`, and the
+  GitHub commit page agree.
+- No build, browser, or accessibility test has been run (no website exists).
 
 ### Remaining risks
 
-- First push may require interactive GitHub authentication.
 - No local web server helper exists yet (Node is available; Python is not).
 - All visual/audio assets and their licenses remain unselected.
 
