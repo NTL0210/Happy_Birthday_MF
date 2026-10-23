@@ -1,8 +1,8 @@
 # PROJECT_STATUS — Moonlight Protocol: Strawberry Dream
 
 - **Current phase:** Phase 2 — Asset acquisition and static scaffold
-- **Phase status:** Complete; final git verification pending
-- **Last updated:** 2026-10-23 11:29 +07:00
+- **Phase status:** Complete; committed and pushed to `main`
+- **Last updated:** 2026-10-23 11:31 +07:00
 - **Repository:** <https://github.com/NTL0210/Happy_Birthday_MF>
 
 ## Project objective
@@ -16,11 +16,19 @@ Birthday Mission → Strawberry Hunt → Cake of the Moonlight → The Secret Le
 - **Phase 0 — Repository audit and project setup:** complete, pushed, and verified.
 - **Phase 1 — Research and asset discovery:** complete; research commit `44ea171`.
 - **Phase 2 — Asset acquisition and static scaffold:** complete; assets optimized,
-  scaffold built, and browser QA passed. Commit/push verification is the only remaining
-  bookkeeping step.
+  scaffold built, browser QA passed, and implementation commit `4ef7e1e` pushed to
+  `main`.
 - **Phase 3 — Full five-screen implementation:** not started. Requires explicit
   authorization.
 - Remote head before the Phase 2 push: `4b83c05` (`docs: record cleanup push`).
+- A follow-up documentation commit records this Phase 2 status update.
+
+## Git state
+
+- Phase 1 research commit: `44ea171` (`docs: complete phase 1 research`)
+- Phase 2 implementation commit: `4ef7e1e` (`feat: add licensed assets and phase 2 scaffold`)
+- Both commits were pushed to `origin/main`.
+- Phase 2 status record: follow-up documentation commit.
 
 ## Phase 2 deliverables
 
