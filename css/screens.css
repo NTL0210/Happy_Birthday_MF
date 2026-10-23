@@ -1,0 +1,214 @@
+/* ---------- Screen: The Dark Hour ---------- */
+.hero-layout {
+  grid-template-columns: minmax(0, 1.08fr) minmax(17rem, 0.72fr);
+  align-items: end;
+}
+
+.hero-copy {
+  max-width: 54rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.hero-aside {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 25rem);
+  justify-self: end;
+  padding-bottom: var(--space-4);
+}
+
+.hero-aside__panel {
+  transform: translateY(-0.6rem) rotate(0.4deg);
+}
+
+.hero-aside__glow {
+  position: absolute;
+  z-index: -1;
+  right: -8%;
+  bottom: -10%;
+  width: 64%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 97, 123, 0.18), transparent 68%);
+  filter: blur(12px);
+}
+
+/* ---------- Screen: Birthday Mission ---------- */
+.mission-layout {
+  grid-template-columns: minmax(0, 1.02fr) minmax(16rem, 0.72fr);
+}
+
+.mission-copy {
+  max-width: 47rem;
+}
+
+.mission-brief {
+  max-width: 34rem;
+}
+
+/* ---------- Screen: Strawberry Hunt ---------- */
+.hunt-layout {
+  grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
+}
+
+.hunt-copy {
+  max-width: 40rem;
+}
+
+.hunt-layout .target-grid {
+  width: 100%;
+  justify-self: end;
+}
+
+/* ---------- Screen: Cake of the Moonlight ---------- */
+.cake-layout {
+  grid-template-columns: minmax(0, 0.86fr) minmax(20rem, 1.14fr);
+}
+
+.cake-copy {
+  max-width: 40rem;
+}
+
+.cake-layout .asset-frame {
+  justify-self: end;
+  width: 100%;
+}
+
+/* ---------- Screen: Secret Letter ---------- */
+.letter-layout {
+  grid-template-columns: minmax(0, 0.78fr) minmax(21rem, 1.22fr);
+}
+
+.letter-copy {
+  max-width: 39rem;
+}
+
+.letter-layout .letter-stage {
+  width: 100%;
+  justify-self: end;
+}
+
+/* ---------- Notes for the scaffold ---------- */
+.scaffold-note {
+  max-width: 33rem;
+  margin-top: var(--space-4);
+  color: var(--color-moon-faint);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+/* ---------- Responsive screen layouts ---------- */
+@media (max-width: 1240px) {
+  .hero-layout,
+  .mission-layout,
+  .hunt-layout,
+  .cake-layout,
+  .letter-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(2rem, 5vh, 3.5rem);
+  }
+
+  .hero-layout {
+    align-items: start;
+  }
+
+  .hero-aside,
+  .hunt-layout .target-grid,
+  .cake-layout .asset-frame,
+  .letter-layout .letter-stage {
+    justify-self: stretch;
+  }
+
+  .hero-aside {
+    width: 100%;
+    max-width: 38rem;
+    padding-bottom: 0;
+  }
+
+  .hero-aside__panel {
+    transform: none;
+  }
+
+  .hero-aside__glow {
+    display: none;
+  }
+
+  .mission-layout,
+  .cake-layout,
+  .letter-layout {
+    align-items: start;
+  }
+
+  .asset-frame {
+    min-height: 13rem;
+  }
+
+  .asset-frame img {
+    width: min(72%, 22rem);
+  }
+
+  .asset-frame--gift img {
+    width: min(54%, 16rem);
+  }
+
+  .asset-frame--cake img {
+    width: min(72%, 22rem);
+  }
+
+  .hunt-layout .target-grid {
+    max-width: 38rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .hero-actions .microcopy {
+    text-align: center;
+  }
+
+  .hero-aside {
+    max-width: none;
+  }
+
+  .screen-title {
+    font-size: clamp(2.5rem, 13vw, 4.2rem);
+  }
+
+  .asset-frame img {
+    width: min(82%, 19rem);
+  }
+
+  .asset-frame--gift img {
+    width: min(62%, 14rem);
+  }
+
+  .asset-frame--cake img {
+    width: min(82%, 19rem);
+  }
+
+  .letter-layout .letter-stage {
+    min-height: 26rem;
+  }
+
+  .letter-stage__envelope {
+    width: min(78%, 18rem);
+  }
+
+  .letter-preview {
+    width: min(94%, 20rem);
+  }
+}

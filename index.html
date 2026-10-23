@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101A35" />
+    <meta
+      name="description"
+      content="Moonlight Protocol: Strawberry Dream — a short, moonlit birthday transmission in five screens."
+    />
+    <meta property="og:title" content="Moonlight Protocol — Strawberry Dream" />
+    <meta
+      property="og:description"
+      content="A birthday signal is moving through the moonlit city. Follow it before the Dark Hour ends."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/bg-moonlit-sky.jpg" />
+    <title>Moonlight Protocol — Strawberry Dream</title>
+
+    <link rel="icon" href="assets/images/strawberry.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/rajdhani-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/nunito-sans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/playfair-display-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/screens.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+
+  <body data-phase="2">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="ambient" aria-hidden="true">
+      <div class="ambient__sky">
+        <picture>
+          <source
+            srcset="
+              assets/images/bg-moonlit-sky-1280.webp 1280w,
+              assets/images/bg-moonlit-sky.webp      1920w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+          <img
+            src="assets/images/bg-moonlit-sky.jpg"
+            alt=""
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
+      </div>
+      <div class="ambient__wash"></div>
+      <div class="ambient__stars"></div>
+      <div class="ambient__skyline"></div>
+      <div class="ambient__glow"></div>
+    </div>
+
+    <div class="app">
+      <header class="site-header">
+        <a class="brand" href="#dark-hour" data-nav="0" aria-label="Moonlight Protocol home">
+          <span class="brand__mark" aria-hidden="true">MP</span>
+          <span class="brand__text">
+            <span class="brand__eyebrow">Moonlight Protocol</span>
+            <span class="brand__title">Strawberry Dream</span>
+          </span>
+        </a>
+
+        <div class="site-header__actions">
+          <p class="screen-count" aria-live="polite">
+            <span id="screen-number">01</span><span class="screen-count__slash">/</span>05
+          </p>
+          <button
+            class="sound-toggle"
+            type="button"
+            id="sound-toggle"
+            aria-pressed="false"
+            aria-describedby="sound-help"
+          >
+            <span class="sound-toggle__icon" aria-hidden="true"></span>
+            <span class="sound-toggle__label" id="sound-label">Sound off</span>
+          </button>
+          <span class="sr-only" id="sound-help">Background music and interface sounds are off by default.</span>
+        </div>
+      </header>
+
+      <main id="main" class="stage" tabindex="-1">
+        <!-- 01 — The Dark Hour -->
+        <section
+          class="screen screen--hero is-active"
+          id="dark-hour"
+          data-screen="0"
+          aria-labelledby="dark-hour-title"
+        >
+          <div class="screen__inner hero-layout">
+            <div class="hero-copy">
+              <p class="kicker">
+                <span class="kicker__line" aria-hidden="true"></span>
+                Transmission 00:00 · Dark Hour
+              </p>
+              <h1 id="dark-hour-title" class="display-title" tabindex="-1">
+                <span class="display-title__small">Moonlight Protocol</span>
+                <span class="display-title__main">Strawberry</span>
+                <span class="display-title__accent">Dream</span>
+              </h1>
+              <p class="lede">
+                A birthday signal is moving through the moonlit city. Follow it before the
+                Dark Hour ends.
+              </p>
+              <div class="hero-actions">
+                <button class="button" type="button" data-next>
+                  <span>Begin transmission</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <p class="microcopy">No hurry. The moon is patient.</p>
+              </div>
+            </div>
+
+            <aside class="hero-aside" aria-label="Tonight's protocol preview">
+              <div class="panel hero-aside__panel">
+                <p class="panel__label">Tonight's protocol</p>
+                <ol class="protocol-list">
+                  <li><span>01</span> Receive the mission</li>
+                  <li><span>02</span> Find five strawberries</li>
+                  <li><span>03</span> Decorate the cake</li>
+                  <li><span>04</span> Read the secret letter</li>
+                </ol>
+              </div>
+              <p class="hero-aside__ribbon">2–4 min</p>
+              <div class="hero-aside__glow" aria-hidden="true"></div>
+            </aside>
+          </div>
+
+          <div class="screen__footer">
+            <p class="status-line">
+              <span class="status-dot" aria-hidden="true"></span>
+              Signal stable · Strawberry channel open
+            </p>
+            <button class="text-button" type="button" data-credits-open>
+              Credits &amp; licenses
+            </button>
+          </div>
+        </section>
+
+        <!-- 02 — Birthday Mission -->
+        <section
+          class="screen screen--mission"
+          id="mission"
+          data-screen="1"
+          aria-labelledby="mission-title"
+          hidden
+        >
+          <div class="screen__inner mission-layout">
+            <div class="mission-copy">
+              <p class="kicker">
+                <span class="kicker__line" aria-hidden="true"></span>
+                Transmission 01 · Package detected
+              </p>
+              <h2 id="mission-title" class="screen-title" tabindex="-1">Birthday Mission</h2>
+              <p class="lede">
+                A small gift has arrived at the edge of the Dark Hour. It comes with three
+                instructions and a very soft ribbon.
+              </p>
+
+              <div class="panel mission-brief">
+                <p class="panel__label">Mission brief</p>
+                <ul class="mission-list">
+                  <li><span>01</span> Find five strawberries hidden in the night.</li>
+                  <li><span>02</span> Build a cake worthy of the moon.</li>
+                  <li><span>03</span> Open the letter. Read it slowly.</li>
+                </ul>
+                <p class="scaffold-badge">Phase 2 scaffold · interaction next</p>
+              </div>
+
+              <div class="screen-actions">
+                <button class="button" type="button" data-next>
+                  <span>Continue</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <button class="button button--ghost" type="button" data-prev>
+                  Back
+                </button>
+              </div>
+            </div>
+
+            <div class="asset-frame asset-frame--gift">
+              <img
+                src="assets/images/gift.svg"
+                alt="A pink gift box tied with a white ribbon"
+                width="411"
+                height="435"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- 03 — Strawberry Hunt -->
+        <section
+          class="screen screen--hunt"
+          id="hunt"
+          data-screen="2"
+          aria-labelledby="hunt-title"
+          hidden
+        >
+          <div class="screen__inner hunt-layout">
+            <div class="hunt-copy">
+              <p class="kicker">
+                <span class="kicker__line" aria-hidden="true"></span>
+                Transmission 02 · Five targets
+              </p>
+              <h2 id="hunt-title" class="screen-title" tabindex="-1">Strawberry Hunt</h2>
+              <p class="lede">
+                The city has hidden five strawberries in plain sight. The hunt logic arrives
+                in the next phase; the target array is already in position.
+              </p>
+              <p class="scaffold-badge">Phase 2 scaffold · hunt logic next</p>
+
+              <div class="screen-actions">
+                <button class="button" type="button" data-next>
+                  <span>Continue</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <button class="button button--ghost" type="button" data-prev>
+                  Back
+                </button>
+              </div>
+            </div>
+
+            <div class="target-grid" aria-hidden="true">
+              <img src="assets/images/strawberry.svg" alt="" width="224" height="363" loading="lazy" decoding="async" />
+              <img src="assets/images/strawberry.svg" alt="" width="224" height="363" loading="lazy" decoding="async" />
+              <img src="assets/images/strawberry.svg" alt="" width="224" height="363" loading="lazy" decoding="async" />
+              <img src="assets/images/strawberry.svg" alt="" width="224" height="363" loading="lazy" decoding="async" />
+              <img src="assets/images/strawberry.svg" alt="" width="224" height="363" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </section>
+
+        <!-- 04 — Cake of the Moonlight -->
+        <section
+          class="screen screen--cake"
+          id="cake"
+          data-screen="3"
+          aria-labelledby="cake-title"
+          hidden
+        >
+          <div class="screen__inner cake-layout">
+            <div class="cake-copy">
+              <p class="kicker">
+                <span class="kicker__line" aria-hidden="true"></span>
+                Transmission 03 · Bakery online
+              </p>
+              <h2 id="cake-title" class="screen-title" tabindex="-1">Cake of the Moonlight</h2>
+              <p class="lede">
+                Vanilla, strawberry, cocoa. Candles, berries, and one very important wish.
+                The bakery controls will be wired up in the next phase.
+              </p>
+
+              <div class="flavor-row">
+                <span>Vanilla</span>
+                <span>Strawberry</span>
+                <span>Cocoa</span>
+              </div>
+              <p class="scaffold-badge">Phase 2 scaffold · cake controls next</p>
+
+              <div class="screen-actions">
+                <button class="button" type="button" data-next>
+                  <span>Continue</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <button class="button button--ghost" type="button" data-prev>
+                  Back
+                </button>
+              </div>
+            </div>
+
+            <div class="asset-frame asset-frame--cake">
+              <img
+                src="assets/images/cake.svg"
+                alt="A strawberry birthday cake with pink frosting, berries, and candles"
+                width="1949"
+                height="2232"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- 05 — The Secret Letter -->
+        <section
+          class="screen screen--letter"
+          id="letter"
+          data-screen="4"
+          aria-labelledby="letter-title"
+          hidden
+        >
+          <div class="screen__inner letter-layout">
+            <div class="letter-copy">
+              <p class="kicker">
+                <span class="kicker__line" aria-hidden="true"></span>
+                Transmission 04 · Sealed
+              </p>
+              <h2 id="letter-title" class="screen-title" tabindex="-1">The Secret Letter</h2>
+              <p class="lede">
+                The last screen is the quiet one. A letter, a wish, and a signature from the
+                moon. The final copy is waiting for the recipient's name.
+              </p>
+              <p class="scaffold-badge">Phase 2 scaffold · letter copy next</p>
+
+              <div class="screen-actions">
+                <button class="button" type="button" data-replay>
+                  <span>Replay</span>
+                  <span aria-hidden="true">↺</span>
+                </button>
+                <button class="button button--ghost" type="button" data-prev>
+                  Back
+                </button>
+              </div>
+            </div>
+
+            <div class="letter-stage">
+              <img
+                class="letter-stage__envelope"
+                src="assets/images/envelope.svg"
+                alt="A cream envelope sealed with a strawberry-pink heart"
+                width="949"
+                height="743"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="letter-preview">
+                <p class="letter-preview__date">The Dark Hour · 00:00</p>
+                <p class="letter-preview__salutation">To you,</p>
+                <p>Some wishes are too big for candles. This one is for you.</p>
+                <p class="letter-preview__signature">— with love, from the moon</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>
+          Unofficial personal gift. Not affiliated with Atlus or SEGA. No proprietary game
+          artwork, logos, music, or extracted assets are included.
+        </p>
+        <button class="text-button" type="button" data-credits-open>Credits &amp; licenses</button>
+      </footer>
+    </div>
+
+    <dialog id="credits-dialog" class="credits-dialog" aria-labelledby="credits-title">
+      <div class="credits-dialog__head">
+        <p class="kicker">Open source credits</p>
+        <h2 id="credits-title">Credits &amp; licenses</h2>
+        <button
+          class="credits-dialog__close"
+          type="button"
+          data-credits-close
+          aria-label="Close credits"
+        >
+          ×
+        </button>
+      </div>
+      <div class="credits-dialog__body">
+        <p>
+          <strong>Background Night / Full Moon</strong> by Alekei —
+          <a href="https://opengameart.org/content/background-night" target="_blank" rel="noopener noreferrer">OpenGameArt</a>,
+          CC BY 3.0. Converted to WebP and JPEG; no other changes.
+        </p>
+        <p>
+          <strong>Forgotten Lullaby — Music Box Loop</strong> by Mega Pixel Music Lab —
+          <a href="https://opengameart.org/content/forgotten-lullaby" target="_blank" rel="noopener noreferrer">OpenGameArt</a>,
+          CC BY 4.0. “Music by Mega Pixel Music Lab megapixelmusiclab.com”.
+        </p>
+        <p>
+          <strong>UI Audio</strong> by Kenney —
+          <a href="https://kenney.nl/assets/ui-audio" target="_blank" rel="noopener noreferrer">kenney.nl</a>,
+          CC0. Converted from OGG to MP3.
+        </p>
+        <p>
+          <strong>Openclipart illustrations</strong> — CC0: Strawberry Birthday Cake by
+          j4p4n; Strawberry by zeimusu; Gift Box pink by monsterbraingames; Pink Bow by
+          Gigglish; Love Letter by mvolz; Open Envelope by jhnri4; City Skyline Silhouette
+          by GDJ. Source links are listed in the README.
+        </p>
+        <p>
+          <strong>Fonts</strong> — Rajdhani, Nunito Sans, and Playfair Display are licensed
+          under the SIL Open Font License 1.1. License texts are included in
+          <code>assets/fonts/</code>.
+        </p>
+        <p class="credits-dialog__note">
+          This is an unofficial personal gift. It is not affiliated with, endorsed by, or
+          sponsored by Atlus or SEGA. All characters, logos, and music from commercial
+          games remain the property of their respective owners.
+        </p>
+      </div>
+    </dialog>
+
+    <div class="sr-only" id="screen-announcer" aria-live="polite" aria-atomic="true"></div>
+
+    <noscript>
+      <p class="no-js-note">
+        This experience needs JavaScript for screen navigation, audio controls, and the
+        interactive birthday sequence.
+      </p>
+    </noscript>
+  </body>
+</html>

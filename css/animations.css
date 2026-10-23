@@ -1,0 +1,127 @@
+@keyframes screen-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.9rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.45rem);
+  }
+}
+
+@keyframes panel-float {
+  0%,
+  100% {
+    transform: translateY(-0.6rem) rotate(0.4deg);
+  }
+  50% {
+    transform: translateY(-1.05rem) rotate(0.4deg);
+  }
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.48;
+  }
+  to {
+    opacity: 0.82;
+  }
+}
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0.2rem rgba(82, 215, 245, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 0.4rem rgba(82, 215, 245, 0.04);
+  }
+}
+
+@keyframes berry-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-0.32rem) rotate(1deg);
+  }
+}
+
+.screen.is-active {
+  animation: screen-in var(--dur-slow) var(--ease-out) both;
+}
+
+.ambient__stars {
+  animation: twinkle 8s var(--ease-soft) infinite alternate;
+}
+
+.asset-frame img {
+  animation: float-soft 7s var(--ease-soft) infinite;
+}
+
+.hero-aside__panel {
+  animation: panel-float 9s var(--ease-soft) infinite;
+}
+
+.status-dot {
+  animation: status-pulse 2.8s var(--ease-soft) infinite;
+}
+
+.target-grid img {
+  animation: berry-bob 5s var(--ease-soft) infinite;
+}
+
+.target-grid img:nth-child(2) {
+  animation-delay: -0.8s;
+}
+
+.target-grid img:nth-child(3) {
+  animation-delay: -1.6s;
+}
+
+.target-grid img:nth-child(4) {
+  animation-delay: -2.4s;
+}
+
+.target-grid img:nth-child(5) {
+  animation-delay: -3.2s;
+}
+
+.credits-dialog[open] {
+  animation: screen-in var(--dur-base) var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .screen.is-active,
+  .asset-frame img,
+  .hero-aside__panel,
+  .target-grid img,
+  .ambient__stars,
+  .status-dot {
+    animation: none !important;
+  }
+}
